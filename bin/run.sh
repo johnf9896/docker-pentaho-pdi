@@ -1,5 +1,6 @@
 # Start the Pentaho Spoon fat client in a container using the X11 server of the host
-# See https://github.com/accso/docker-pentaho-pdi
+# Original: https://github.com/accso/docker-pentaho-pdi
+# This version: https://github.com/hfiel/docker-pentaho-pdi
 
 # These are paths that have been preconfigured for a typical Linux environment. You have have
 # to change them to match your OS.
@@ -32,4 +33,4 @@ docker run --rm \
        -v $HOME/.docker_qt_config:/home/$DOCKER_USER/.config \
        -v $XKB_DIR:/usr/share/X11/xkb \
        --name $DOCKER_CONTAINER \
-       accso/docker-pentaho-pdi:latest 
+       hfiel/docker-pentaho-pdi-8.1:latest
