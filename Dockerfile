@@ -22,7 +22,7 @@ RUN apt-get update \
 
 RUN mkdir -p /opt \
     && echo "Downloading PDI from: ${URL}" \
-    && curl -o /opt/${FILENAME} -L ${URL} \
+    && curl -k -o /opt/${FILENAME} -L ${URL} \
     && cd /opt \
     && unzip ${FILENAME} \
     && rm ${FILENAME}
